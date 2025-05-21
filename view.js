@@ -4,8 +4,6 @@ const resumeData = { "importantDetails": { "email": "sundaraguru@gmail.com", "ex
 var ResumeViewer = (function () {
     /**
      * Validates if a string is valid JSON
-     * @param {string} str - String to validate as JSON
-     * @return {boolean} True if valid JSON, false otherwise
      */
     function isJSON(str) {
         try {
@@ -17,9 +15,7 @@ var ResumeViewer = (function () {
     }
 
     /**
-     * Displays a status message to the user that auto-dismisses
-     * @param {string} message - The message to display
-     * @param {string} type - The alert type (success, warning, danger, etc.)
+     * Displays a status message to the user that auto-dismissed
      */
     function displayStatus(message, type) {
         // Create the modal HTML elements
@@ -99,8 +95,6 @@ var ResumeViewer = (function () {
     var renderers = {
         /**
          * Renders work experience section
-         * @param {Array} experiences - Array of work experience objects
-         * @return {string} HTML content for work experiences
          */
         workExperiences: function (experiences) {
             if (!experiences || !Array.isArray(experiences) || experiences.length === 0) {
@@ -131,8 +125,6 @@ var ResumeViewer = (function () {
 
         /**
          * Renders education details section
-         * @param {Array} education - Array of education detail objects
-         * @return {string} HTML content for education details
          */
         educationDetails: function (education) {
             if (!education || !Array.isArray(education) || education.length === 0) {
